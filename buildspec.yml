@@ -9,16 +9,23 @@ phases:
       - echo Logging in to AWS CodeArtifact...
       # UPDATED: Correct Region (ap-south-1), Domain (rayyan), and Account ID
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain rayyan --domain-owner 977099020493 --region ap-south-1 --query authorizationToken --output text`
-  build:
+    build:
     commands:
-      - echo Build started on `date`
-     
-      - mvn clean package -s settings.xml
+      - echo "====== BEGINNING TEST PHASE ======"
+      - echo "Running tests on `date`"
+      - chmod +x run-tests.sh
+      - ./run-tests.sh
+      - echo "====== TEST PHASE COMPLETE ======"
+      - echo "====== BEGINNING BUILD PHASE ======"
+      - echo "Build started on `date`"
+      - mvn -s settings.xml compile
+      - echo "====== BUILD PHASE COMPLETE ======"
+  
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "Build completed on `date`"
+      - mvn -s settings.xml package
+
 artifacts:
   files:
-    - target/*.war
-  # UPDATED: Flattens the folder structure
-  discard-paths: yes
+    - target/nextwork-web-project.war
