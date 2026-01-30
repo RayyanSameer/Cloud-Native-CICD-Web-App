@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/rayyan-aws-native-cicd-codebuild.war
+  - source: target/rayyan-webapp.war
     destination: /usr/share/tomcat/webapps/
 hooks:
   BeforeInstall:
