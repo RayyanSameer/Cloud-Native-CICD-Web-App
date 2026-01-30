@@ -26,7 +26,7 @@ phases:
 
 artifacts:
   files:
-    - target/rayyan-webapp.war  <-- CHANGE THIS to match the log
+    - target/rayyan-webapp.war
     - appspec.yml
     - scripts/**/*
   discard-paths: no
