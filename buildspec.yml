@@ -28,7 +28,7 @@ phases:
 
 artifacts:
   files:
-    - target/nextwork-web-project.war
+    - target/rayyan-aws-native-cicd-codebuild.war
     - appspec.yml
     - scripts/**/*
   discard-paths: no
