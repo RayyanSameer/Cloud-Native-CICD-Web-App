@@ -26,7 +26,7 @@ phases:
 
 artifacts:
   files:
-    - target/*.war
+    - /target/rayyan-aws-native-cicd-codebuild.war
     - appspec.yml
     - scripts/**/*
   discard-paths: no
