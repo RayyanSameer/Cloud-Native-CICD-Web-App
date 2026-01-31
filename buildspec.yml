@@ -7,7 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to AWS CodeArtifact...
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain rayyan --domain-owner 977099020493 --region ap-south-1 --query authorizationToken --output text`
+      # FIXED: Changed domain from 'rayyan' to 'rayyan-domain'
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain rayyan-domain --domain-owner 977099020493 --region ap-south-1 --query authorizationToken --output text`
   build:
     commands:
       - echo "====== BEGINNING TEST PHASE ======"

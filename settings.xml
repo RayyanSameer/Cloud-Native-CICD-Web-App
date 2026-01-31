@@ -16,16 +16,22 @@
       <repositories>
         <repository>
           <id>rayyan-rayyan-cicd</id>
-          <url>https://rayyan-977099020493.d.codeartifact.ap-south-1.amazonaws.com/maven/rayyan-cicd/</url>
+          <url>https://rayyan-domain-977099020493.d.codeartifact.ap-south-1.amazonaws.com/maven/rayyan-cicd-repo/</url>
         </repository>
       </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+            <id>rayyan-rayyan-cicd</id>
+            <url>https://rayyan-domain-977099020493.d.codeartifact.ap-south-1.amazonaws.com/maven/rayyan-cicd-repo/</url>
+        </pluginRepository>
+      </pluginRepositories>
     </profile>
   </profiles>
   <mirrors>
   <mirror>
     <id>rayyan-rayyan-cicd</id>
     <name>rayyan-rayyan-cicd</name>
-    <url>https://rayyan-977099020493.d.codeartifact.ap-south-1.amazonaws.com/maven/rayyan-cicd/</url>
+    <url>https://rayyan-domain-977099020493.d.codeartifact.ap-south-1.amazonaws.com/maven/rayyan-cicd-repo/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
